@@ -78,6 +78,11 @@ nav{
     transition: 0.7s ease;
 }
 
+.resume-btn a{
+    text-decoration: none;
+    color:#faaf69;
+}
+
 .resume-btn:hover{
     background-color: #D77A24;
     color: white;
@@ -85,22 +90,10 @@ nav{
     font-weight: 600;
 }
 
-/* .nav-btn{
-    background-color: rgb(47, 47, 47);
-    border: none;
-    color: rgb(225, 225, 225) ;
-    margin: 0em 1em;
-    width: 20px;
-    height: 2px;
-    background-color: #D77A24;
-    transition: 2s; 
+.resume-btn:active{
+    color: white;
 }
 
-.nav-btn a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.3em;
-} */
 
 /* ChatGPT navbar  */
 .nav-btn {
