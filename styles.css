@@ -13,7 +13,58 @@ body{
 
 nav{
     display: flex;
+    justify-content: space-between;
+    margin: 1.3vw 2.5vw;
 }
+
+/* From ChatGPT */
+#Logo {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 800;
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: width 0.5s ease; /* Smoothly transition width */
+}
+
+#Logo h2,
+#Logo h3 {
+    display: inline-block; /* Ensure h2 and h3 are inline */
+    margin: 0; /* Remove default margins */
+    position: absolute; /* Position absolutely within #Logo */
+    top: 0; /* Align to the top */
+    transition: opacity 0.5s ease, transform 0.5s ease, left 0.5s ease; /* Smoothly transition opacity, transform, and left */
+}
+
+#Logo h2{
+    position: relative;
+}
+
+#Logo h3 {
+    font-size: 1.58em;
+    font-weight: 700;
+    opacity: 0; /* Hide h3 initially */
+    transform: scale(0.8); /* Slightly smaller initially */
+    right: 3em; /* Place h3 to the right initially */
+}
+
+#Logo:hover {
+    width: 11em; /* Adjust width to fit "Hi There!" */
+}
+
+#Logo:hover h2 {
+    opacity: 0; /* Hide h2 on hover */
+    transform: scale(1.0); /* Add a slight zoom-out effect */
+    left: -4em; /* Move h2 element out of view */
+}
+
+#Logo:hover h3 {
+    opacity: 1; /* Show h3 on hover */
+    transform: scale(1); /* Restore the original scale */
+    left: 0; /* Move h3 to its original position */
+}
+/* End of from chatgpt */
 
 .resume-btn{
     border: 2px solid #D77A24;
@@ -21,8 +72,10 @@ nav{
     background-color:rgb(47, 47, 47);
     color: #faaf69;
     padding: 10px;
+    font-size: 1em;
     font-weight: 600;
     letter-spacing: 0.4px;
+    transition: 0.7s ease;
 }
 
 .resume-btn:hover{
@@ -32,11 +85,60 @@ nav{
     font-weight: 600;
 }
 
-.nav-btn{
+/* .nav-btn{
     background-color: rgb(47, 47, 47);
     border: none;
     color: rgb(225, 225, 225) ;
+    margin: 0em 1em;
+    width: 20px;
+    height: 2px;
+    background-color: #D77A24;
+    transition: 2s; 
 }
+
+.nav-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+} */
+
+/* ChatGPT navbar  */
+.nav-btn {
+    background-color: rgb(47, 47, 47);
+    border: none;
+    color: rgb(255, 253, 253);
+    margin: 0em 1em;
+    position: relative; /* Required for positioning the ::after element */
+    display: inline-block; /* Make the element inline-block to fit the width of the text */
+    font-weight: 500;
+}
+
+.nav-btn a {
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+    font-size: 1.3em;
+    position: relative; /* Required for positioning the ::after element */
+}
+
+.nav-btn a:hover{
+    color: white;
+}
+
+.nav-btn a::after {
+    content: ''; /* Required for the ::after pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 0;
+    height: 2px;
+    background-color: #D77A24;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-btn a:hover::after {
+    width: 100%; /* Expand the underline to fit the width of the link text */
+}
+/* end ChatGPT */
 
 #landing-welcome{
     color: #ffad61;
@@ -74,6 +176,8 @@ nav{
     justify-content: center;
     align-items:center;
 }
+
+/* Temporary CSS until I change it to Animated icons */
 .social-button{
     border-radius: 50px;
     border: 2px solid #D77A24;

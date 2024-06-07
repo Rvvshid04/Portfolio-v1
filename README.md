@@ -62,5 +62,4 @@ Started on 30/05/2024 at 12:05 AM.
 
 
 ## Styling
-Google font-
-font-size-
+Google font- Encode Sans
