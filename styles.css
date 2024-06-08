@@ -143,9 +143,9 @@ nav{
 }
 
 #landing-intro{
-   width: 39vw;
+   width: 42vw;
    margin-left: 10vw;
-   margin-top: 26vh;
+   margin-top: 0.2vh;
 }
 
 
@@ -163,10 +163,18 @@ nav{
 #getTouch{
     margin-top:2em;
     font-size: 1.3em;
+    display: flex;
+}
+
+#icon-farrow{
+    width: 2rem;
+    height: 1.7rem;
 }
 
 .home-body{
     display: flex;
+    width: 100vw;
+    height: 90vh;
 }
 
 .home-body #landing-intro{
@@ -174,6 +182,10 @@ nav{
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
+}
+
+.about-body{
+    height: 90vh;
 }
 
 #social-links {

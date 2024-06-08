@@ -73,8 +73,7 @@ Started on 30/05/2024 at 12:05 AM.
 - Google Icon- 'arrow forward'
 
 ### Images
-- Background image for the landing page-Photo by Eastman Childs on Unsplash
-    - URL:  https://unsplash.com/photos/a-black-sky-with-a-lot-of-stars-CEtIM994vaI
+...
 
 
 **Optional**- haven't been implemented yet but prospective for v2 or v3
