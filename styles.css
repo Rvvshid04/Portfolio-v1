@@ -1,20 +1,49 @@
-*{
+*,
+*::before,
+*::after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* html{
+    scroll-behavior: smooth;
+    scrollbar-color: #faaf69 #1f1f1f;
+} */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:#faaf69;
+    border-radius: 50px;
+}
+
 body{
     font-family: 'Encode Sans', sans-serif;
     font-weight: 400;
-    background-color: rgb(31, 31, 31);
+    background-color: #1f1f1f;
     color: rgb(225, 225, 225);
 }
 
 nav{
+    width: 100vw;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 1.3vw 2.5vw;
+    /* margin: 1.3vw 2.5vw; */
+    background-color: rgba(31,31,31,0.8);
+    position: fixed;
+    box-shadow: 0 20px 30px rgba(31,31,31,0.15);
+}
+
+nav div{
+    margin: 15px 50px;
 }
 
 /* From ChatGPT */
@@ -23,18 +52,18 @@ nav{
     display: inline-block;
     font-size: 1.5em;
     font-weight: 800;
-    overflow: hidden; /* Hide overflowing content */
-    white-space: nowrap; /* Prevent text from wrapping */
-    transition: width 0.5s ease; /* Smoothly transition width */
+    overflow: hidden; 
+    white-space: nowrap; 
+    transition: width 0.5s ease; 
 }
 
 #Logo h2,
 #Logo h3 {
-    display: inline-block; /* Ensure h2 and h3 are inline */
-    margin: 0; /* Remove default margins */
-    position: absolute; /* Position absolutely within #Logo */
-    top: 0; /* Align to the top */
-    transition: opacity 0.5s ease, transform 0.5s ease, left 0.5s ease; /* Smoothly transition opacity, transform, and left */
+    display: inline-block; 
+    margin: 0; 
+    position: absolute; 
+    top: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease, left 0.5s ease; 
 }
 
 #Logo h2{
@@ -44,25 +73,25 @@ nav{
 #Logo h3 {
     font-size: 1.58em;
     font-weight: 700;
-    opacity: 0; /* Hide h3 initially */
-    transform: scale(0.8); /* Slightly smaller initially */
-    right: 3em; /* Place h3 to the right initially */
+    opacity: 0; 
+    transform: scale(0.8);
+    right: 3em;
 }
 
 #Logo:hover {
-    width: 11em; /* Adjust width to fit "Hi There!" */
+    width: 11em; 
 }
 
 #Logo:hover h2 {
-    opacity: 0; /* Hide h2 on hover */
-    transform: scale(1.0); /* Add a slight zoom-out effect */
-    left: -4em; /* Move h2 element out of view */
+    opacity: 0;
+    transform: scale(1.0); 
+    left: -4em; 
 }
 
 #Logo:hover h3 {
-    opacity: 1; /* Show h3 on hover */
-    transform: scale(1); /* Restore the original scale */
-    left: 0; /* Move h3 to its original position */
+    opacity: 1;
+    transform: scale(1); 
+    left: 0; 
 }
 /* End of from chatgpt */
 
@@ -133,7 +162,8 @@ nav{
 }
 
 .nav-btn a:hover::after {
-    width: 100%; /* Expand the underline to fit the width of the link text */
+    width: 100%;
+     /* Expand the underline to fit the width of the link text */
 }
 /* end ChatGPT */
 
@@ -145,13 +175,13 @@ nav{
 #landing-intro{
    width: 42vw;
    margin-left: 10vw;
-   margin-top: 0.2vh;
+   margin-top: 10vh;
 }
 
 
 #landing-header{
     font-weight: 400;
-    font-size: 2em;
+    font-size: 2.3em;
     line-height: 1.5;
 }
 
@@ -166,6 +196,50 @@ nav{
     display: flex;
 }
 
+/* #mail{
+    text-decoration: none;
+    color:white;
+}
+#mail::after{
+    width: 100%;
+    height: 2px;
+    background-color: #faaf69;
+}
+
+#mail::after:hover{
+    height: 100%;
+} */
+
+/* ChatGPT */
+#mail {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+#mail::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    opacity: 1;
+    background-color: #faaf69;
+    transition: height 0.3s ease;
+}
+
+#mail:hover::after {
+    height: 100%;
+    opacity: 0.4;
+    background-color: #faaf69;
+    z-index: -1;  /* To ensure the background color doesn't overlap the text */
+}
+
+/* end ChatGPT */
+
 #icon-farrow{
     width: 2rem;
     height: 1.7rem;
@@ -173,9 +247,8 @@ nav{
 
 .home-body{
     display: flex;
-    width: 100vw;
     height: 90vh;
-}
+} 
 
 .home-body #landing-intro{
     display: flex;
