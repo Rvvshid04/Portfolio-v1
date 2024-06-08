@@ -7,9 +7,9 @@ Started on 30/05/2024 at 12:05 AM.
 1. Domain name and hosting: For the moment, I'll stick to GitHub pages. 
 
 2. Design and layout: 
-- Responsive design
-- Clean and Modern layout
-- Personal branding
+- Responsive design 
+- Clean and Modern layout (took inspiration for various designs I've seen)
+- Consistent colors (dark theme- black, white, a shade of orange), (light theme-black, white, and a shade of blue)
 
 3. Content sections (Prone to changes)
 
@@ -22,7 +22,6 @@ Started on 30/05/2024 at 12:05 AM.
 **Skills**
 -Technical skills (programming languages, tools, frameworks)
 -Soft skills (communication, teamwork)
--Visual representation (charts or graphs)
 
 **Work experience** (have none at the moment)
 -Professional experience with company names, job titles, durations, and descriptions of responsibilities and achievements
@@ -71,6 +70,8 @@ Started on 30/05/2024 at 12:05 AM.
 
 ### Icons
 - Google Icon- 'arrow forward'
+- svgrepo- 'github color svg vector', 'behance'
+    - LinkedIn author- HashiCorp
 
 ### Images
 ...
