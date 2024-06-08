@@ -7,9 +7,9 @@ Started on 30/05/2024 at 12:05 AM.
 1. Domain name and hosting: For the moment, I'll stick to GitHub pages. 
 
 2. Design and layout: 
--Responsive design
--Clean and Modern layout
--Personal branding
+- Responsive design
+- Clean and Modern layout
+- Personal branding
 
 3. Content sections (Prone to changes)
 
@@ -55,11 +55,26 @@ Started on 30/05/2024 at 12:05 AM.
 
 ## Tools and Technologies
 - Frontend: HTML, CSS, JavaScript, React(optional)
-- Backend: Node.js, Express, Python (Flask/Django)
+- Backend (optional): Node.js, Express, Python (Flask/Django)
 - Version Control: Git, GitHub
 - Deployment: GitHub Pages
 - Design: Figma
 
 
 ## Styling
-Google font- Encode Sans
+- Google font- Encode Sans
+
+
+## Attributions
+### Fonts
+- Google Fonts- Encode Sans (100-900)
+
+### Icons
+- Google Icon- 'arrow forward'
+
+### Images
+- Background image for the landing page-Photo by Eastman Childs on Unsplash
+    - URL:  https://unsplash.com/photos/a-black-sky-with-a-lot-of-stars-CEtIM994vaI
+
+
+**Optional**- haven't been implemented yet but prospective for v2 or v3

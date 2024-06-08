@@ -7,7 +7,7 @@
 body{
     font-family: 'Encode Sans', sans-serif;
     font-weight: 400;
-    background-color: rgb(47, 47, 47);
+    background-color: rgb(31, 31, 31);
     color: rgb(225, 225, 225);
 }
 
@@ -69,7 +69,7 @@ nav{
 .resume-btn{
     border: 2px solid #D77A24;
     border-radius: 5px;
-    background-color:rgb(47, 47, 47);
+    background-color:rgb(31, 31, 31);
     color: #faaf69;
     padding: 10px;
     font-size: 1em;
@@ -81,6 +81,10 @@ nav{
 .resume-btn a{
     text-decoration: none;
     color: #faaf69;
+}
+
+.resume-btn a:hover{
+    color: white;
 }
 
 .resume-btn:hover{
@@ -97,7 +101,7 @@ nav{
 
 /* ChatGPT navbar  */
 .nav-btn {
-    background-color: rgb(47, 47, 47);
+    background-color: rgb(31, 31, 31);
     border: none;
     color: rgb(255, 253, 253);
     margin: 0em 1em;
