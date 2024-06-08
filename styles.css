@@ -141,6 +141,7 @@ nav{
 #landing-intro{
    width: 39vw;
    margin-left: 10vw;
+   margin-top: 26vh;
 }
 
 
@@ -160,25 +161,37 @@ nav{
     font-size: 1.3em;
 }
 
-#social-links{
+.home-body{
     display: flex;
-    flex-direction: column;
-}
-#social-links button{
-    display: flex;
-    justify-content: center;
-    align-items:center;
 }
 
-/* Temporary CSS until I change it to Animated icons */
-.social-button{
-    border-radius: 50px;
-    border: 2px solid #D77A24;
-    background-color:rgb(47, 47, 47);
-    padding:10px;
-    width: 5em;
-    height:5em;
-    color:#faaf69;
-    text-align:center;
-    font-weight: 600;
+.home-body #landing-intro{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
 }
+
+#social-links {
+    margin: 0  2.5vw;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 45%; /* Adjust as needed */
+    right: 100;
+    background-color: white;
+}
+
+#social-links a {
+    padding: 0.5em 0;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+
+
