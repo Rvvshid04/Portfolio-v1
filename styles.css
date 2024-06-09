@@ -6,10 +6,9 @@
     box-sizing: border-box;
 }
 
-/* html{
+html{
     scroll-behavior: smooth;
-    scrollbar-color: #faaf69 #1f1f1f;
-} */
+}
 
 ::-webkit-scrollbar{
     width: 10px;
@@ -30,6 +29,7 @@ body{
     background-color: #1f1f1f;
     color: rgb(225, 225, 225);
 }
+
 
 nav{
     width: 100vw;
@@ -59,7 +59,7 @@ nav div{
 
 #logo-link{
     text-decoration: none;
-    color: white    ;
+    color: white;
 }
 
 .Logo h2,
@@ -290,5 +290,89 @@ nav div{
 }
 
 
+/* --------------- */
+
+.after-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300vh;
+}
 
 
+.about-body{
+    display: flex;
+    width: 50vw;
+}
+
+.about-body div{
+    margin: 5vw 2vw 0vw 2vw;
+}
+
+.after-heading h2{
+    font-size: 1.2em;
+    font-weight: 500;
+    color:#faaf69;  
+}
+
+.after-paragraph p{
+    font-size: 1.05em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+
+.about-resume a{
+    text-decoration: none;
+    color:#faaf69;
+}
+
+.about-resume a:hover{
+   color:#D77A24;
+}
+
+#about-a{
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+#about-a:hover{
+    color:#faaf69;
+}
+
+.skill-body{
+    display: flex;
+    width: 50vw;
+}
+
+.skill-body div{
+    margin: 0vw 1vw;
+}
+
+.skill-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-col p{
+    margin: 6px 10px 6px 0px;
+}
+
+.skill-col-heading{
+    font-weight: 600;
+}
+
+.skill{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+}
