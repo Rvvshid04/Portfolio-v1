@@ -297,7 +297,7 @@ nav div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300vh;
+    height:200vh;
 }
 
 
@@ -375,4 +375,19 @@ nav div{
 .skills{
     display: flex;
     flex-direction: column;
+}
+
+.skills p{
+    color: rgb(205, 205, 205);
+}
+
+.skill-legend{
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: rgba(67, 67, 67, 0.6);
+}
+
+.skill-legend p{
+    margin: 10px 0px;
 }
