@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raashid Arquil</title>
+    <title>Raashid Arquil Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <script src="scripts.js"></script>
 </head>
 <body>
     <nav>
@@ -20,10 +21,10 @@
         <div id="nav-links">
             <button class="nav-btn"><a href="#About">About</a></button>
             <button class="nav-btn"><a href="#Skill">Skills</a></button>
-            <button class="nav-btn"><a href="#">Projects</a></button>
-            <button class="nav-btn"><a href="#">Experience</a></button>
-            <button class="nav-btn"><a href="#">Testimonials</a></button>
-            <button class="nav-btn"><a href="#">Contact</a></button>
+            <button class="nav-btn"><a href="#Projects">Projects</a></button>
+            <button class="nav-btn"><a href="#Experience">Experience</a></button>
+            <button class="nav-btn"><a href="#Testimonials">Testimonials</a></button>
+            <button class="nav-btn"><a href="#Contact">Contact</a></button>
             <button class="resume-btn">
                 <a href="./Raashid Arquil-Resume-Incomplete.pdf" target="_blank">Resume</a>
             </button>
@@ -34,7 +35,7 @@
         <div id="social-links">
             <a class="social-button" href="https://www.linkedin.com/in/raashid-arquil/" target="_blank"><img src="./images/Icons/linkedin-round-svgrepo-com-orange.svg" alt="LinkedIn" width="36px" height="40px"></a>
             <a class="social-button" href="https://github.com/Rvvshid04" target="_blank"><img src="./images/Icons/github-color-svgrepo-com.svg" alt="GitHub" width="36px" height="40px"></a>
-            <a class="social-button" href="https://www.behance.net/raashidarquil" target="_blank"><img src="/images/Icons/behance-round-svgrepo-com-orange.svg" alt="Behance"  width="36px" height="35px"></a>
+            <a class="social-button" href="https://www.behance.net/raashidarquil" target="_blank"><img src="./images/Icons/behance-round-svgrepo-com-orange.svg" alt="Behance"  width="36px" height="35px"></a>
         </div>
 
         <div id="landing-intro">
@@ -58,51 +59,69 @@
         <div class="skill-body">
             <div class="skill-head">
                 <div class="after-heading" id="Skill"><h2>SKILLS</h2></div>
-                <div class="skill-legend">
-                    <p>Beginner</p>
-                    <p>Intermediate</p>
-                    <p>Professional</p>
-                    <p>Senior</p>
-                    <p>Note: These are attributed subjectively</p>
+                <div class="legend">
+                    <div class="legend-item newbie">Newbie</div> 
+                    <!-- baby steps -->
+                    <div class="legend-item intermediate">Intermediate</div>
+                    <!-- walking -->
+                    <div class="legend-item professional">Professional</div>
+                    <!-- jogging/ running -->
+                    <div class="legend-item senior">Senior</div>
+                    <!-- marathons and iron mans -->
                 </div>
             </div>
-            <div class="skill">
-                <div class="skill-col">
-                    <div class="skill-col-heading">Languages</div>
-                    <div class="skills">
-                        <p>JavaScript</p>
-                        <p>Python</p>
-                        <p>Java</p>
-                        <p>C#</p>
-                    </div>
-                </div>
-                <div class="skill-col">
-                    <div class="skill-col-heading">Languages</div>
-                    <div class="skills">
-                        <p>JavaScript</p>
-                        <p>Python</p>
-                        <p>Java</p>
-                        <p>C#</p>
-                        <p>PHP</p>
-                        <p>SQL</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                    </div>
-                </div>
-                 <div class="skill-col">
-                    <div class="skill-col-heading">Designing</div>
-                    <div class="skills">
-                        <p>Figma</p>
-                        <p>Wireframing</p>
-                        <p>Prototyping</p>
-                    </div>
-                </div>
+            <div class="skills-container">
+                <div class="skill" data-level="intermediate">HTML</div>
+                <div class="skill" data-level="intermediate">CSS</div>
+                <div class="skill" data-level="intermediate">JavaScript</div>
+                <div class="skill" data-level="newbie">React</div>
+                <div class="skill" data-level="intermediate">Figma</div>
+                <div class="skill" data-level="intermediate">Python</div>
+                <div class="skill" data-level="newbie">SQL</div>
+                <div class="skill" data-level="newbie">PHP</div>
+                <div class="skill" data-level="newbie">C#</div>
+                <div class="skill" data-level="intermediate">OOP</div>
+                <div class="skill" data-level="intermediate">Software Development</div>
+                <div class="skill" data-level="intermediate">Marketing Theory</div>
+                <div class="skill" data-level="intermediate">Strategy development</div>
+                <div class="skill" data-level="newbie">Java</div> 
+                <!-- data-level= newbie, intermediate, professional and senior -->
+                <!-- Add more skills as needed -->
+            </div>
+            
             </div>
         </div>
     </div>
     
     <!-- for the project sections: "Currently under construction – just like the pyramids once were." -->
+
+    <div class="project-container">
+        <div class="after-heading" id="Projects"><h2>PROJECT</h2></div>
+        <span id="dash"></span>
+        <p class="project-quote">"Under construction probably/possibly/hopefully– just like the pyramids once were."</p>
+    </div>
+
     <!-- for the work experience section: Experience level: Padawan in training -->
+    <div class="project-container">
+        <div class="after-heading" id="Experience"><h2>EXPERIENCE</h2></div>
+        <span id="dash"></span>
+        <p class="project-quote">"Experience level: Padawan in training"</p>
+    </div>
     <!-- for testimonials: "I'm as curious as you about what people think." -->
+    <div class="project-container">
+        <div class="after-heading" id="Testimonials"><h2>TESTIMONIALS</h2></div>
+        <span id="dash"></span>
+        <p class="project-quote">...Nothing yet.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="after-heading" id="Contact"><h2>Let's get in touch!</h2></div>
+        <span id="dash"></span>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:raashid.arq@gmail.com">raashid.arq@gmail.com</a> </p>
+            <p>OR</p>
+            <a class="social-button" href="https://www.linkedin.com/in/raashid-arquil/" target="_blank"><img src="./images/Icons/linkedin-round-svgrepo-com-orange.svg" alt="LinkedIn" width="36px" height="40px"></a>
+        </div>
+    </div>
 </body>
 </html>
