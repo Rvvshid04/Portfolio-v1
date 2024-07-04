@@ -428,6 +428,34 @@ nav div{
     font-size: 1em;
     display: flex;
     flex-direction: column;
+    color: black;
+    border-radius: 10px;
+    pointer-events: none;
+    box-shadow: 0px;
+    transition: .5s ease;
+}
+
+.project-card h2{
+    padding: 10px 0px;
+    transition: 0.5s ease;
+    pointer-events: auto;
+}
+
+.project-card:hover{
+    box-shadow: 0px 18px 18px 0px #D77A24;
+}
+
+.list-tag{
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: 600;
+}
+
+.list-tag *{
+    margin-left: 10px;
+    border: 2px solid #D77A24;
+    border-radius: 20px;
+    padding: 5px;
 }
 /* 
 .project-card{
