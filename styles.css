@@ -424,15 +424,23 @@ nav div{
 
 .project-card{
     padding: 20px;
-    background-color: #D77A24;
+    background-color: white;
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
 }
-
-.project-card li{
+/* 
+.project-card{
     text-decoration: none;
     border: 2px solid #D77A24;
-
-}
+    border-radius: 20px;
+    width: 30%;
+    color: #1f1f1f;
+    text-align: center;
+    padding: 2px 2px;
+    display: flex;
+    flex-flow: row wrap;
+} */
 
 .contact-container{
     display: flex;
