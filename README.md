@@ -2,16 +2,21 @@
 Hey there! I am Rvvshid04 and this is my portfolio. It's still in development. Just 'jumped' into it. 
 Started on 30/05/2024 at 12:05 AM. 
 
+Changes to be made:
+-Removing the testimonials & experiences section
+-Removing the legend in the skills section and the ratings system. 
+    -Many of them, I've only had to apply it a few times, like SQL. Personally, I feel my SQL is still in the Hello World         stage, sure I understand DFD Diagrams, ERD and Normalization. But the practical applications of each of them is still        iffy. Even my JS needs some working on.
+    
 ## Planning out the portfolio
 
-1. Domain name and hosting: For the moment, I'll stick to GitHub pages. 
+1. Domain name and hosting: For the moment, I'll stick to GitHub pages. Been recommended to try out Vercel though.
 
 2. Design and layout: 
 - Responsive design 
 - Clean and Modern layout (took inspiration for various designs I've seen)
-- Consistent colors (dark theme- black, white, a shade of orange), (light theme-black, white, and a shade of blue)
+- Consistent colors (dark theme- black, white, a shade of orange) OR (light theme-black, white, and a shade of blue)
 
-3. Content sections (Prone to changes)
+3. Content sections (Prone to changes --> edit: and changes have been made since)
 
 **Home landing page**
 
@@ -23,18 +28,11 @@ Started on 30/05/2024 at 12:05 AM.
 -Technical skills (programming languages, tools, frameworks)
 -Soft skills (communication, teamwork)
 
-**Work experience** (have none at the moment)
--Professional experience with company names, job titles, durations, and descriptions of responsibilities and achievements
--Internships and freelance work
-
 **Projects**
 -Showcase a selection of projects
 -Include project title, description, technologies used, and your role
 -Links to live projects or repositories
 -Screenshots or demos
-
-**Blog** (optional) "ooh, I like this feature"
--Articles on technical topics, tutorials, or personal insights
 
 **Contact**
 -Contact form
@@ -53,16 +51,13 @@ Started on 30/05/2024 at 12:05 AM.
     - Look into caching strategies
 
 ## Tools and Technologies
-- Frontend: HTML, CSS, JavaScript, React(optional)
-- Backend (optional): Node.js, Express, Python (Flask/Django)
+- Frontend: HTML, CSS, JavaScript
 - Version Control: Git, GitHub
 - Deployment: GitHub Pages
 - Design: Figma
 
-
 ## Styling
 - Google font- Encode Sans
-
 
 ## Attributions
 ### Fonts
@@ -73,8 +68,4 @@ Started on 30/05/2024 at 12:05 AM.
 - svgrepo- 'github color svg vector', 'behance'
     - LinkedIn author- HashiCorp
 
-### Images
-...
 
-
-**Optional**- haven't been implemented yet but prospective for v2 or v3
