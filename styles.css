@@ -285,6 +285,10 @@ nav div{
     font-weight: bold;
 }
 
+#social-links a:hover{
+    transform: scale(1.2);
+}
+
 .social-button{
     margin: 6px 5px;
 }
@@ -381,13 +385,11 @@ nav div{
     color: rgb(205, 205, 205);
 }
 
-.skill-legend{
-    width: 50%;
-    height: 100%;
-    border-radius: 15px;
-    background-color: rgba(67, 67, 67, 0.6);
+
+.bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #D77A24;
 }
 
-.skill-legend p{
-    margin: 10px 0px;
-}
