@@ -373,39 +373,6 @@ nav div{
     margin: 0 auto;
 }
 
-.legend {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-.legend-item {
-    border-radius: 7px;
-    color: #fff;
-}
-
-.legend .legend-item{
-    margin-top: 20px;
-    padding: 8px 5px;
-    font-weight: 500;
-}
-
-.legend-item.newbie {
-    background-color: #ff6b6b;
-}
-
-.legend-item.intermediate {
-    background-color: #b99740;
-}
-
-.legend-item.professional {
-    background-color: #6ab04c;
-}
-
-.legend-item.senior {
-    background-color: #1e90ff;
-}
-
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -425,22 +392,6 @@ nav div{
     color: #fff;
 }
 
-.skill.newbie:hover {
-    background-color: #ff6b6b;
-}
-
-.skill.intermediate:hover {
-    background-color: #f9ca24;
-    color: #333;
-}
-
-.skill.professional:hover {
-    background-color: #6ab04c;
-}
-
-.skill.senior:hover {
-    background-color: #1e90ff;
-}
 /* ChatGPT End */
 
 
@@ -471,6 +422,18 @@ nav div{
     color: #b5b5b5;
 }
 
+.project-card{
+    padding: 20px;
+    background-color: #D77A24;
+    font-size: 1em;
+}
+
+.project-card li{
+    text-decoration: none;
+    border: 2px solid #D77A24;
+
+}
+
 .contact-container{
     display: flex;
     justify-content: center;
@@ -495,18 +458,9 @@ nav div{
     color: #D77A24;
 }
 
-<<<<<<< HEAD
-
-.bullet{
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    background-color: #D77A24;
-}
-
-=======
 .contact-info a:hover{
     text-decoration: none;
     color: #61bbe8;
 }
->>>>>>> 94b3ee72c6b556f00b5318de8442e86261465c3a
+
+
