@@ -1,15 +1,16 @@
-﻿# Portfolio
-Hey there! I am Raashid Arquil and this is my portfolio. (It's still in development. Started on 30/05/2024 at 12:05 AM. 
+﻿# Raashid's Portfolio
 
-## Notes
-    - Minify CSS and JS
-    - Optimize images to load faster
-    - Look into caching strategies
-    - What makes my website load faster and perform better (Pagespeed Insights!)
+Welcome to my portfolio! 👋 This is a collection of my work, including my projects, achievements, and background in both software engineering and marketing. As a software engineering student, I aim to combine technical expertise with strategic marketing knowledge to deliver innovative and user-focused solutions.
 
-### Any attrubutions: 
-- Google Icon- 'arrow forward'
-- svgrepo- 'github color svg vector', 'behance'
-    - LinkedIn author- HashiCorp
+## How to View the Portfolio
 
+The portfolio is live on https://rvvshid04.github.io/Portfolio-v1/ , and you can view it anytime from your browser. 
 
+## Contact
+Feel free to reach out if you have any questions, collaboration opportunities, or simply want to chat about software engineering and marketing.
+
+Email: [raashid.arq@gmail.com]
+
+LinkedIn: [linkedin.com/in/raashid-arquil/]
+
+GitHub: [github.com/Rvvshid04]

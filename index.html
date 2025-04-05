@@ -11,10 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="scripts.js"></script>
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <nav>
         <div class="Logo">
             <a href="#home" id="logo-link">
@@ -30,23 +36,29 @@
             <button class="nav-btn"><a href="#Testimonials">Testimonials</a></button> -->
             <button class="nav-btn"><a href="#Contact">Contact</a></button>
             <button class="resume-btn">
-                <a href="./Raashid Arquil-Resume-Incomplete.pdf" target="_blank">Resume</a>
+                <a href="./Raashid Arquil - CV.pdf" target="_blank">CV</a>
             </button>
         </div>
     </nav>
     <div class="home-body" id="home">
-        <!-- Change the social links to be animated on hover for better UX -->
+        <!-- Social links with CSS icons -->
         <div id="social-links">
-            <a class="social-button" href="https://www.linkedin.com/in/raashid-arquil/" target="_blank"><img src="./images/Icons/linkedin-round-svgrepo-com-orange.svg" alt="LinkedIn" width="36px" height="40px"></a>
-            <a class="social-button" href="https://github.com/Rvvshid04" target="_blank"><img src="./images/Icons/github-color-svgrepo-com.svg" alt="GitHub" width="36px" height="40px"></a>
-            <a class="social-button" href="https://www.behance.net/raashidarquil" target="_blank"><img src="./images/Icons/behance-round-svgrepo-com-orange.svg" alt="Behance"  width="36px" height="35px"></a>
+            <a class="social-button" href="https://www.linkedin.com/in/raashid-arquil/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="social-button" href="https://github.com/Rvvshid04" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="social-button" href="https://www.behance.net/raashidarquil" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
         </div>
 
         <div id="landing-intro">
             <span id="landing-welcome">Welcome to my digital corner </span>
             <h3 id="landing-header">I'm<span id="landing-bold-name"> Raashid Arquil</span>,<br> a software engineering student,<br> born in Sri Lanka, based in Kandy,<br>loves... peace and quiet, and good company.</h3>
 
-            <p id="getTouch">Get in touch <img src="./images/arrow_forward-google-icons.png" alt="arrow forward" id="icon-farrow"> <span id="contact"><a href="mailto:raashid.arq@gmail.com" id="mail">raashid.arq@gmail.com</a></span></p> 
+            <p id="getTouch">Get in touch <span class="arrow-icon"></span> <span id="contact"><a href="mailto:raashid.arq@gmail.com" id="mail">raashid.arq@gmail.com</a></span></p> 
             
         </div>
     </div>
@@ -54,9 +66,13 @@
     <div class="after-body">
         <div class="about-body">
             <div class="after-heading" id="About"><h2>ABOUT</h2></div>
-            <div class="after-paragraph"><p>Hi! I'm Raashid, a software engineering student based in <strong>Kandy, Sri Lanka</strong>. I am currently a student of <strong><a href="https://esoft.lk/" target="_blank" id="about-a">ESOFT Metro Campus</a></strong>. While I've delved into various technologies, I'm aware that there's much more to explore and understand.I've recently completed my studies in marketing at <strong><a href="https://slim.lk/" target="_blank" id="about-a">Sri Lanka Institute of Marketing (SLIM)</a></strong> having completed a <strong><a href="https://www.cim.co.uk/" target="_blank" id="about-a">Chartered Institute of Marketing (CIM)</a></strong> course, which helped in understanding the market, the macro and microenvironments, and its helps in taking a holistic view, breaking down complexities to derive meaningful insights. I aim to apply this knowledge in practical settings to continue growing my skills and pursue a meaningful and rewarding career. If you have similar interests and want to collaborate, <strong><a href="#Contact" id="about-a">let's connect!</a></strong></p></div>
-            <div class="about-resume">
-                <p>*For more information, check out my <a href="./Raashid Arquil-Resume-Incomplete.pdf" target="_blank"><strong>resume</strong></a>!</p>
+            <div class="after-paragraph">
+                <p>
+                    Hi, I'm Raashid, a software engineering student at ESOFT Metro Campus, based in Kandy, Sri Lanka. My journey in technology spans from full-stack web development to data analytics, and I'm looking to expand my knowledge and skills in the ever-evolving tech landscape.
+                   <br> In addition to my technical background, I recently completed a marketing program at the Sri Lanka Institute of Marketing (SLIM), where I gained a Chartered Institute of Marketing (CIM) certification. This experience has given me a unique perspective on understanding markets, analyzing both macro and micro-environments, and turning complex data into actionable insights. I believe this dual expertise allows me to approach challenges from a holistic viewpoint, blending tech with market-driven strategies.
+                   <br> I'm excited about applying my knowledge in real-world projects and continuing to grow both as a software engineer and a marketer. If you're working on an interesting project or looking for someone with a blend of tech and marketing skills, let's connect!
+                </p>
+                <p> Feel free to check out my <a href="./Raashid Arquil - CV.pdf" target="_blank"><strong>CV</strong></a> for more details. </p>
             </div>
         </div>
 
@@ -97,36 +113,99 @@
             </div>
         </div>
 
-        <!-- Since the previous development, I've studied a bit -->
-        <section class="projects">
+        <!-- Projects Section -->
+        <section class="projects" id="Projects">
             <h2 class="project-heading">PROJECTS</h2>
             
             <div class="container">
-                <section class="project-card" aria-labelledby="Project-title">
-                    <img src="" alt="" style="width: 250px; height: 150px;">
-                    <h2 id="Project-title">PROJECT TITLE</h2>
+                <!-- Project Card 1 -->
+                <section class="project-card">
+                    <img src="./images/project-placeholder.jpg" alt="Project 1" class="project-image">
+                    <h2>Portfolio Website</h2>
                     <div class="list-tag">
-                        <div class="tag">html5</div>
+                        <div class="tag">HTML5</div>
                         <div class="tag">CSS3</div>
                         <div class="tag">JavaScript</div>
-                        <div class="tag">PHP</div>
-                        <div class="tag">SQL</div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Rvvshid04/Portfolio-v1" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank" class="project-btn">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
                     </div>
                 </section>
+                
+                <!-- Project Card 2 -->
                 <section class="project-card">
-                    <img src="" alt="" style="width: 250px; height: 150px;">
-                    <h2>PROJECT TITLE</h2>
+                    <img src="./images/project-placeholder.jpg" alt="Project 2" class="project-image">
+                    <h2>E-Commerce Platform</h2>
                     <div class="list-tag">
-                        <div class="tag">html5</div>
-                        <div class="tag">CSS3</div>
+                        <div class="tag">React</div>
+                        <div class="tag">Node.js</div>
+                        <div class="tag">MongoDB</div>
+                        <div class="tag">Express</div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank" class="project-btn">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </section>
+                
+                <!-- Project Card 3 -->
+                <section class="project-card">
+                    <img src="./images/project-placeholder.jpg" alt="Project 3" class="project-image">
+                    <h2>Task Management App</h2>
+                    <div class="list-tag">
                         <div class="tag">JavaScript</div>
                         <div class="tag">PHP</div>
-                        <div class="tag">SQL</div>
+                        <div class="tag">MySQL</div>
+                        <div class="tag">Bootstrap</div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank" class="project-btn">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
                     </div>
                 </section>
             </div>
         </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-container" id="Contact">
+            <h2 class="project-heading">CONTACT</h2>
+            <div class="contact-info">
+                <p>Feel free to reach out to me for collaborations or just a friendly hello</p>
+                <a href="mailto:raashid.arq@gmail.com">raashid.arq@gmail.com</a>
+            </div>
+        </section>
     </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-sitemap">
+            <h4>Site Map</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skill">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-logo">
+            <h2>RA</h2>
+            <h3>Raashid Arquil</h3>
+        </div>
+    </footer>
     
     <!-- for the project sections: "Currently under construction – just like the pyramids once were." -->
     <!-- for the work experience section: Experience level: Padawan in training -->
