@@ -354,6 +354,10 @@ nav div{
     gap: 1.5rem;
 }
 
+.landing-roles {
+    font-size: 1.2em;
+}
+
 #landing-header {
     font-size: 3.2em;
     line-height: 1.2;
