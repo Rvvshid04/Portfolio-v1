@@ -21,7 +21,17 @@
         <i class="fas fa-moon"></i>
     </button>
 
+    <!-- Add this before the theme toggle button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <div class="Logo">
             <a href="#home" id="logo-link">
             <h2>RA</h2>
@@ -35,83 +45,245 @@
 <!--             <button class="nav-btn"><a href="#Experience">Experience</a></button>
             <button class="nav-btn"><a href="#Testimonials">Testimonials</a></button> -->
             <button class="nav-btn"><a href="#Contact">Contact</a></button>
+            <a href="./Raashid Arquil - CV.pdf" target="_blank">
             <button class="resume-btn">
-                <a href="./Raashid Arquil - CV.pdf" target="_blank">CV</a>
+                    CV
             </button>
+            </a>
         </div>
     </nav>
     <div class="home-body" id="home">
-        <!-- Social links with CSS icons -->
+        <!-- Social Links -->
         <div id="social-links">
-            <a class="social-button" href="https://www.linkedin.com/in/raashid-arquil/" target="_blank">
+            <a class="social-button linkedin" href="https://www.linkedin.com/in/raashid-arquil/" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a class="social-button" href="https://github.com/Rvvshid04" target="_blank">
+            <a class="social-button github" href="https://github.com/Rvvshid04" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a class="social-button" href="https://www.behance.net/raashidarquil" target="_blank">
+            <a class="social-button behance" href="https://www.behance.net/raashidarquil" target="_blank">
                 <i class="fab fa-behance"></i>
             </a>
         </div>
 
+        <!-- Landing Introduction -->
         <div id="landing-intro">
-            <span id="landing-welcome">Welcome to my digital corner </span>
-            <h3 id="landing-header">I'm<span id="landing-bold-name"> Raashid Arquil</span>,<br> a software engineering student,<br> born in Sri Lanka, based in Kandy,<br>loves... peace and quiet, and good company.</h3>
-
+            <span id="landing-welcome">Welcome to my portfolio</span>
+            <div class="landing-main">
+                <h1 id="landing-header">
+                    Hi, I'm <span id="landing-bold-name">Raashid Arquil</span>
+                </h1>
+                <div class="landing-roles">
+                    <p>Software Engineering Student</p>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div class="landing-location">
+                    <p>Based in Kandy, Sri Lanka 🌏</p>
+                </div>
+            </div>
+            <div class="landing-contact">
             <p id="getTouch">Get in touch <span class="arrow-icon"></span> <span id="contact"><a href="mailto:raashid.arq@gmail.com" id="mail">raashid.arq@gmail.com</a></span></p> 
-            
+            </div>
         </div>
     </div>
 
     <div class="after-body">
+        <!-- About Section -->
         <div class="about-body">
-            <div class="after-heading" id="About"><h2>ABOUT</h2></div>
-            <div class="after-paragraph">
-                <p>
-                    Hi, I'm Raashid, a software engineering student at ESOFT Metro Campus, based in Kandy, Sri Lanka. My journey in technology spans from full-stack web development to data analytics, and I'm looking to expand my knowledge and skills in the ever-evolving tech landscape.
-                   <br> In addition to my technical background, I recently completed a marketing program at the Sri Lanka Institute of Marketing (SLIM), where I gained a Chartered Institute of Marketing (CIM) certification. This experience has given me a unique perspective on understanding markets, analyzing both macro and micro-environments, and turning complex data into actionable insights. I believe this dual expertise allows me to approach challenges from a holistic viewpoint, blending tech with market-driven strategies.
-                   <br> I'm excited about applying my knowledge in real-world projects and continuing to grow both as a software engineer and a marketer. If you're working on an interesting project or looking for someone with a blend of tech and marketing skills, let's connect!
-                </p>
-                <p> Feel free to check out my <a href="./Raashid Arquil - CV.pdf" target="_blank"><strong>CV</strong></a> for more details. </p>
+            <div class="about-content-wrapper">
+                <div class="after-heading" id="About">
+                    <h2>ABOUT</h2>
+                </div>
+                <div class="about-paragraph">
+                    <!-- Introduction -->
+                    <div class="about-paragraph-section">
+                        <p>
+                            Hi, I'm <span class="highlight">Raashid</span>, a software engineering student at ESOFT Metro Campus, based in Kandy, Sri Lanka. My journey in technology spans from full-stack web development to data analytics, and I'm looking to expand my knowledge and skills in the ever-evolving tech landscape.
+                        </p>
+
+                        <p>
+                            In addition to my technical background, I recently completed a postgraduate diploma in Marketing at the <span class="highlight">Sri Lanka Institute of Marketing (SLIM)</span>, where I gained a <span class="highlight">Chartered Institute of Marketing (CIM) certification</span>. This experience has given me a unique perspective on understanding markets, analyzing both macro and micro-environments, and turning complex data into actionable insights.
+                        </p>
+
+                        <p>
+                            I believe this dual expertise allows me to approach challenges from a holistic viewpoint, blending tech with market-driven strategies. I'm excited about applying my knowledge in real-world projects and continuing to grow both as a software engineer and a marketer.
+                        </p>
+                        <p>
+                            If you're working on an interesting project or looking for someone with a blend of tech and marketing skills, let's connect!
+                        </p>
+                    </div>
+                    
+                    <!-- CV Link -->
+                    <div style="text-align: center;">
+                        <a href="./Raashid Arquil - CV.pdf" target="_blank" class="cv-link">
+                            <strong>View My CV</strong>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="skill-body">
-            <div class="skill-head">
-                <div class="after-heading" id="Skill"><h2>SKILLS</h2></div>
+        <!-- Skills Section -->
+        <section class="skill-section" id="Skill">
+            <div class="skill-container">
+                <div class="skills-header">
+                    <div class="after-heading">
+                        <h2>SKILLS</h2>
             </div>
-            <div class="skill">
-                <div class="skill-col">
-                    <div class="skill-col-heading">LANGUAGES</div>
-                    <div class="skills">
-                        <p>JavaScript</p>
-                        <p>Python</p>
-                        <p>Java</p>
-                        <p>C#</p>
-                        <p>PHP</p>
-                        <p>SQL</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
+                    <div class="skill-status">
+                        <span class="status-dot"></span>
+                        STATUS: BEGINNER
                     </div>
                 </div>
-                 <div class="skill-col">
-                    <div class="skill-col-heading">DESIGN</div>
-                    <div class="skills">
-                        <p>Figma</p>
-                        <p>Wireframing</p>
-                        <p>Prototyping</p>
+                
+                <div class="skills-grid">
+                    <!-- Frontend Development -->
+                    <div class="skill-category">
+                        <h3>Frontend Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag html" title="Web Structure">HTML5</span>
+                            <span class="skill-tag css" title="Web Styling">CSS3</span>
+                            <span class="skill-tag javascript" title="Web Programming">JavaScript</span>
+                            <span class="skill-tag react" title="UI Library">React</span>
+                            <span class="skill-tag tailwind" title="Utility CSS">Tailwind</span>
+                            <span class="skill-tag bootstrap" title="CSS Framework">Bootstrap</span>
+                            <!-- Locked Skills -->
+                            <span class="skill-tag locked" title="Type Safety">
+                                TypeScript
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="Progressive Framework">
+                                Vue.js
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="State Management">
+                                Redux
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="CSS Preprocessor">
+                                Sass
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
                     </div>
+
+                    <!-- Backend Development -->
+                    <div class="skill-category">
+                        <h3>Backend Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag nodejs" title="Runtime Environment">Node.js</span>
+                            <span class="skill-tag express" title="Web Framework">Express.js</span>
+                            <span class="skill-tag python" title="Backend Programming">Python</span>
+                            <span class="skill-tag java" title="Enterprise Programming">Java</span>
+                            <span class="skill-tag php" title="Server Scripting">PHP</span>
+                            <span class="skill-tag csharp" title="Microsoft Programming">C#</span>
+                            <!-- Locked Skills -->
+                            <span class="skill-tag locked" title="Python Framework">
+                                Django
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="Java Framework">
+                                Spring Boot
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="Microsoft Framework">
+                                .NET
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis -->
+                    <div class="skill-category">
+                        <h3>Data Analysis</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag python" title="Data Processing">Python</span>
+                            <span class="skill-tag pandas" title="Data Manipulation">Pandas</span>
+                            <span class="skill-tag matplotlib" title="Data Visualization">Matplotlib</span>
+                            <span class="skill-tag powerbi" title="Business Intelligence">Power BI</span>
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="skill-category">
+                        <h3>Database & Storage</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag mysql" title="Relational Database">MySQL</span>
+                            <span class="skill-tag postgresql" title="Advanced Database">PostgreSQL</span>
+                            <span class="skill-tag oracle" title="Enterprise Database">Oracle DB</span>
+                            <span class="skill-tag plsql" title="Database Programming">PL/SQL</span>
+                            <span class="skill-tag supabase" title="Backend Platform">Supabase</span>
+                            <!-- Locked Skills -->
+                            <span class="skill-tag locked" title="NoSQL Database">
+                                MongoDB
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="In-Memory Cache">
+                                Redis
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="Cloud Database">
+                                Firebase
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- DevOps & Tools -->
+                    <div class="skill-category">
+                        <h3>DevOps & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag git" title="Version Control">Git</span>
+                            <span class="skill-tag github" title="Code Hosting">GitHub</span>
+                            <!-- Locked Skills -->
+                            <span class="skill-tag locked" title="Containerization">
+                                Docker
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="Cloud Services">
+                                AWS
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="Web Server">
+                                Nginx
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="skill-tag locked" title="Operating System">
+                                Linux
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Development Tools -->
+                    <div class="skill-category">
+                        <h3>Development Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag vscode" title="Code Editor">VS Code</span>
+                            <span class="skill-tag postman" title="API Testing">Postman</span>
+                            <span class="skill-tag xampp" title="Local Server">XAMPP</span>
+                            <span class="skill-tag npm" title="Package Manager">npm</span>
+                            <span class="skill-tag webpack" title="Module Bundler">Webpack</span>
+                            <!-- Locked Skills -->
+                            <span class="skill-tag locked" title="Testing Framework">
+                                Jest
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Design & UI/UX -->
+                    <div class="skill-category">
+                        <h3>Design & UI/UX</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag figma" title="Design Tool">Figma</span>
+                            <span class="skill-tag responsive" title="Adaptive Design">Responsive Design</span>
+                            <span class="skill-tag accessibility" title="Web Accessibility">Accessibility</span>
                 </div>
-                <div class="skill-col">
-                    <div class="skill-col-heading">OTHER</div>
-                    <div class="skills">
-                        <p>XAMPP</p>
-                        <p>NPM</p>
-                        <p>GitHub</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Projects Section -->
         <section class="projects" id="Projects">
@@ -191,8 +363,12 @@
     
     <!-- Footer -->
     <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Raashid Arquil</h3>
+            </div>
         <div class="footer-sitemap">
-            <h4>Site Map</h4>
+                <h4>Sitemap</h4>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#About">About</a></li>
@@ -201,9 +377,9 @@
                 <li><a href="#Contact">Contact</a></li>
             </ul>
         </div>
-        <div class="footer-logo">
-            <h2>RA</h2>
-            <h3>Raashid Arquil</h3>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Raashid Arquil. All rights reserved.</p>
         </div>
     </footer>
     

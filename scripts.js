@@ -101,5 +101,87 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('#nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        // Toggle active class
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-btn').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('nav');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        // Add/remove scrolled class based on scroll position
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    const scrollTopBtn = document.getElementById('scroll-top');
+    const projectsSection = document.getElementById('Projects');
+
+    // Function to check scroll position and toggle button visibility
+    function toggleScrollButton() {
+        const projectsPosition = projectsSection.offsetTop;
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > projectsPosition) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    }
+
+    // Smooth scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Add click event listener to the button
+    scrollTopBtn.addEventListener('click', scrollToTop);
+
+    // Add scroll event listener to window
+    window.addEventListener('scroll', () => {
+        // Throttle the scroll event to improve performance
+        if (!window.requestAnimationFrame) {
+            // For older browsers
+            window.requestAnimationFrame = function(callback) {
+                return setTimeout(callback, 1000/60);
+            };
+        }
+        
+        window.requestAnimationFrame(toggleScrollButton);
+    });
 });
 // ChatGPT end

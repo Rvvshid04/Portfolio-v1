@@ -60,6 +60,9 @@ body{
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 60px; /* Space for fixed navbar */
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Theme Toggle Button */
@@ -91,30 +94,76 @@ body{
     font-size: 20px;
 }
 
-nav{
-    width: 100vw;
+/* Scroll to Top Button Styles */
+.scroll-top {
+    position: fixed;
+    bottom: 80px; /* Position above theme toggle */
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top i {
+    font-size: 20px;
+}
+
+/* Navbar Styles */
+nav {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg-color);
     position: fixed;
-    box-shadow: 0 20px 30px rgba(31,31,31,0.15);
+    top: 0;
+    left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(var(--bg-color), 0.95);
+    transition: background-color 0.3s ease;
 }
 
 nav div{
     margin: 15px 50px;
 }
 
-/* From ChatGPT */
 .Logo {
     position: relative;
     display: inline-block;
     font-size: 1.5em;
-    font-weight: 800;
+    font-weight: 700;
     overflow: hidden; 
     white-space: nowrap; 
-    transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.875); 
     width: 2.5em;
 }
 
@@ -180,7 +229,7 @@ nav div{
         opacity: 1;
     }
 }
-/* End of from chatgpt */
+
 
 .resume-btn{
     border: 2px solid var(--primary-color);
@@ -214,8 +263,6 @@ nav div{
 }
 
 
-
-/* ChatGPT navbar  */
 .nav-btn {
     background-color: transparent;
     border: none;
@@ -257,37 +304,70 @@ nav div{
 .nav-btn a:hover::after {
     width: 100%;
 }
-/* end ChatGPT */
+    
 
-#landing-welcome{
+/* Main Container */
+.main-container {
+    width: 100%;
+    position: relative;
+}
+
+/* Landing Section */
+.home-body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+#landing-intro {
+    width: 42vw;
+    margin-left: 10vw;
+    padding-top: 120px;
+}
+
+/* Social Links */
+#social-links {
+    position: fixed;
+    left: 2.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+}
+
+/* Landing Content Styles */
+#landing-welcome {
     color: var(--primary-color);
-    font-size:1.2em;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
-#landing-intro{
-   width: 42vw;
-   margin-left: 10vw;
-   margin-top: 10vh;
+.landing-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-
-#landing-header{
+#landing-header {
+    font-size: 3.2em;
+    line-height: 1.2;
     font-weight: 400;
-    font-size: 2.3em;
-    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
 }
 
-#landing-bold-name{
-    font-weight: 750;
+#landing-bold-name {
+    font-weight: 700;
     color: var(--primary-color);
-    transition: 0.5s ease-in-out;
+    transition: color 0.3s ease;
 }
 
-#landing-bold-name:hover{
-    color: var(--accent-color);
-}
-
-/* Get in touch section with CSS icon */
 #getTouch {
     margin-top: 2em;
     font-size: 1.3em;
@@ -296,62 +376,227 @@ nav div{
     gap: 10px;
 }
 
-.arrow-icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-color: var(--primary-color);
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E%3C/svg%3E");
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    transition: transform 0.3s ease;
-}
-
-#getTouch:hover .arrow-icon {
-    transform: translateX(5px);
-}
-
-#contact {
-    margin-left: 5px;
-}
-
-#mail {
-    text-decoration: none;
-    color: var(--primary-color);
-    position: relative;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-}
-
-#mail:hover {
-    color: white;
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-#icon-farrow{
-    width: 2rem;
-    height: 1.7rem;
-}
-
-.home-body{
+/* Main content container */
+.after-body {
+    width: 100%;
     display: flex;
-    height: 90vh;
-} 
-
-.home-body #landing-intro{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
 }
 
-.about-body{
-    height: 90vh;
+/* About Section */
+.about-body {
+    width: 100%;
+    background-color: #1a2b4d;
+    padding: 80px 0;
+    margin: 40px 0;
+}
+
+.about-content-wrapper {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    #landing-intro {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 992px) {
+    #landing-intro {
+        width: 70vw;
+    }
+
+    #landing-header {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-body {
+        padding: 40px 0;
+    }
+
+    #landing-intro {
+        width: 85vw;
+        margin: 0 auto;
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    #social-links {
+    position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    #landing-header {
+        font-size: 2.4em;
+    }
+
+    #getTouch {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .about-content-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-body {
+        padding: 20px 0 60px 0;
+    }
+
+    #landing-intro {
+        padding-top: 40px;
+    }
+
+    #landing-header {
+        font-size: 2em;
+    }
+
+    #getTouch {
+        font-size: 1.1em;
+    }
+}
+
+/* Ensure smooth transitions */
+.home-body, .about-body, #landing-intro {
+    transition: all 0.3s ease;
+}
+
+/* Fix for potential overflow issues */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    padding-top: 60px; /* Space for fixed navbar */
+}
+
+/* About Section Styles - No Animations */
+.about-body {
+    background-color: #1a2b4d;
+    width: 100%;
+    padding: 80px 0;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-content-wrapper {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading styles */
+.about-body .after-heading {
+    margin-top: 0;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+/* Paragraph Styles */
+.about-paragraph {
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.about-paragraph-section {
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-paragraph-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.about-paragraph p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* Highlight text */
+.highlight {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.highlight:hover {
+    color: var(--accent-color);
+}
+
+/* CV Link styling */
+.cv-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.cv-link:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .about-content-wrapper {
+        width: 85%;
+    }
+    
+    .about-paragraph p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content-wrapper {
+        width: 90%;
+    }
+    
+    .about-body {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content-wrapper {
+        width: 95%;
+    }
+    
+    .about-paragraph p {
+        font-size: 0.95em;
+    }
 }
 
 #social-links {
@@ -361,6 +606,7 @@ nav div{
     position: fixed;
     top: 45%;
     right: 100;
+    z-index: 1000;
 }
 
 #social-links a {
@@ -399,53 +645,19 @@ nav div{
 
 /* --------------- */
 
-.after-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height:200vh;
-}
-
-
-.about-body{
-    display: flex;
-    width: 50vw;
-}
-
-.about-body div{
-    margin: 5vw 2vw 0vw 2vw;
-}
-
-.after-paragraph {
-    margin: 2em 0;
-}
-
-.after-paragraph p {
-    font-size: 1.05em;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 1.8;
-    margin-bottom: 2em;
+.about-body .after-paragraph {
+    color: #ffffff;
+    opacity: 0.9;
     max-width: 800px;
 }
 
-.after-paragraph p br {
-    content: "";
-    display: block;
-    margin: 1.5em 0;
-}
-
-.after-paragraph p:last-child {
-    margin-bottom: 0;
-}
-
-.after-heading h2 {
-    font-size: 1.4em;
-    font-weight: 500;
+.about-body .after-paragraph a {
     color: var(--primary-color);
-    margin-bottom: 1.5em;
-    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.about-body .after-paragraph a:hover {
+    color: var(--accent-color);
 }
 
 .about-resume a{
@@ -476,48 +688,269 @@ nav div{
     margin: 0vw 1vw;
 }
 
-/* ChatGPT */
-.skills-section {
-    padding: 20px;
+/* Skills Section Styles */
+.skill-section {
+    padding: 120px 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+.skill-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.skill-category {
+    margin-bottom: 40px;
 }
 
-.skill {
-    flex: 1 1 calc(25% - 20px); /* 4 columns layout */
-    /* background-color: #444; */
-    padding: 10px;
-    /* text-align: center; */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    display: flex;
-}
-
-.skill:hover {
-    color: #fff;
-}
-
-.skill-col{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.05em;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 26px;
-}
-
-
-.skill-col-heading{
+.skill-category h3 {
+    color: var(--text-color);
+    font-size: 1.4em;
+    margin-bottom: 25px;
     font-weight: 600;
 }
-/* ChatGPT End */
 
+/* Skill Tags Container */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Base Tag Styles */
+.skill-tag {
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand Colors for Tags */
+.skill-tag.javascript {
+    background-color: #F7DF1E;
+    color: #000000;
+}
+
+.skill-tag.python {
+    background-color: #3776AB;
+}
+
+.skill-tag.java {
+    background-color: #007396;
+}
+
+.skill-tag.html {
+    background-color: #E34F26;
+}
+
+.skill-tag.css {
+    background-color: #1572B6;
+}
+
+.skill-tag.csharp {
+    background-color: #239120;
+}
+
+.skill-tag.react {
+    background-color: #61DAFB;
+    color: #000000;
+}
+
+.skill-tag.nodejs {
+    background-color: #339933;
+}
+
+.skill-tag.bootstrap {
+    background-color: #7952B3;
+}
+
+.skill-tag.jquery {
+    background-color: #0769AD;
+}
+
+.skill-tag.git {
+    background-color: #F05032;
+}
+
+.skill-tag.github {
+    background-color: #181717;
+}
+
+.skill-tag.vscode {
+    background-color: #007ACC;
+}
+
+.skill-tag.figma {
+    background-color: #F24E1E;
+}
+
+/* Additional Brand Colors for Tags */
+.skill-tag.typescript {
+    background-color: #3178C6;
+}
+
+.skill-tag.vue {
+    background-color: #4FC08D;
+}
+
+.skill-tag.redux {
+    background-color: #764ABC;
+}
+
+.skill-tag.sass {
+    background-color: #CC6699;
+}
+
+.skill-tag.tailwind {
+    background-color: #06B6D4;
+}
+
+.skill-tag.express {
+    background-color: #000000;
+}
+
+.skill-tag.django {
+    background-color: #092E20;
+}
+
+.skill-tag.spring {
+    background-color: #6DB33F;
+}
+
+.skill-tag.php {
+    background-color: #777BB4;
+}
+
+.skill-tag.dotnet {
+    background-color: #512BD4;
+}
+
+.skill-tag.mongodb {
+    background-color: #47A248;
+}
+
+.skill-tag.mysql {
+    background-color: #4479A1;
+}
+
+.skill-tag.postgresql {
+    background-color: #4169E1;
+}
+
+.skill-tag.redis {
+    background-color: #DC382D;
+}
+
+.skill-tag.firebase {
+    background-color: #FFCA28;
+    color: #000000;
+}
+
+.skill-tag.docker {
+    background-color: #2496ED;
+}
+
+.skill-tag.aws {
+    background-color: #232F3E;
+}
+
+.skill-tag.nginx {
+    background-color: #009639;
+}
+
+.skill-tag.linux {
+    background-color: #FCC624;
+    color: #000000;
+}
+
+.skill-tag.postman {
+    background-color: #FF6C37;
+}
+
+.skill-tag.npm {
+    background-color: #CB3837;
+}
+
+.skill-tag.webpack {
+    background-color: #8DD6F9;
+    color: #000000;
+}
+
+.skill-tag.jest {
+    background-color: #C21325;
+}
+
+.skill-tag.xd {
+    background-color: #FF61F6;
+}
+
+.skill-tag.responsive {
+    background-color: #2196F3;
+}
+
+.skill-tag.accessibility {
+    background-color: #00C853;
+}
+
+/* Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .skill-section {
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-section {
+        padding: 80px 0;
+    }
+
+    .skill-category h3 {
+        font-size: 1.3em;
+    }
+
+    .skill-tag {
+        font-size: 0.9em;
+        padding: 6px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-section {
+        padding: 60px 0;
+    }
+
+    .skill-category h3 {
+        font-size: 1.2em;
+    }
+
+    .skill-tags {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        font-size: 0.85em;
+        padding: 5px 12px;
+    }
+}
 
 .project-container{
     display: flex;
@@ -628,18 +1061,26 @@ nav div{
     flex-flow: row wrap;
 } */
 
-.contact-container{
+.contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 40vh;
-
+    min-height: 60vh;
+    background-color: #1a2b4d;
+    width: 100%;
+    padding: 80px 0;
+    margin: 40px 0;
 }
 
-.contact-info{
+/* Update the text colors to ensure visibility on dark background */
+.contact-container .project-heading {
+    color: #ffffff;
+}
+
+.contact-info {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -647,73 +1088,137 @@ nav div{
     padding: 5px;
 }
 
-.contact-info a{
-    text-decoration: none;
-    color: var(--primary-color);
+.contact-info p {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.contact-info a:hover{
+.contact-info a {
     text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
     color: var(--accent-color);
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    padding: 40px 20px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 40px 0 0 0;
+    margin-top: 40px;
 }
 
-.footer-logo {
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-logo h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #ffffff; /* Make text white for better contrast */
+    transition: color 0.3s ease;
+}
+
+.footer-logo h3:hover {
+    color: var(--primary-color);
+}
+
+/* Sitemap Styles - Now Vertical */
+.footer-sitemap {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.footer-logo h2 {
-    font-size: 1.5em;
-    font-weight: 800;
-    color: var(--primary-color);
-}
-
-.footer-logo h3 {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: var(--text-color);
-}
-
-.footer-sitemap {
-    display: flex;
-    flex-direction: column;
-}
-
 .footer-sitemap h4 {
+    color: var(--primary-color);
     font-size: 1.2em;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .footer-sitemap ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Make links vertical */
+    gap: 1rem; /* Space between links */
+    align-items: flex-end; /* Align links to the right */
 }
 
 .footer-sitemap li {
-    margin-bottom: 8px;
+    margin: 0;
 }
 
 .footer-sitemap a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #ffffff; /* Make links white for better contrast */
     transition: color 0.3s ease;
+    font-size: 1em;
 }
 
 .footer-sitemap a:hover {
     color: var(--primary-color);
+}
+
+/* Copyright Section */
+.copyright {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        min-height: 50vh;
+        padding: 60px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-sitemap {
+        align-items: center;
+    }
+
+    .footer-sitemap ul {
+        align-items: center; /* Center links on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 40px 20px;
+    }
+
+    .footer-logo h3 {
+        font-size: 1.2em;
+    }
+
+    .footer-sitemap h4 {
+        font-size: 1.1em;
+    }
+
+    .footer-sitemap a {
+        font-size: 0.9em;
+    }
 }
 
 /* Project Card Buttons */
@@ -781,73 +1286,280 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .project-card {
-        width: 90%;
-        max-width: 350px;
-    }
-    
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-logo {
-        align-items: center;
-        margin-top: 20px;
-    }
-    
-    .footer-sitemap {
-        margin-bottom: 20px;
+        padding: 0 20px;
     }
     
     #landing-intro {
-        width: 80vw;
-        margin-left: 10vw;
+        width: 60vw;
     }
     
     .about-body, .skill-body {
-        width: 80vw;
+        width: 70vw;
     }
-    
+}
+
+@media (max-width: 992px) {
+    /* Navigation */
     nav {
-        flex-direction: column;
-        padding: 10px;
+        padding: 10px 20px;
     }
     
     nav div {
-        margin: 10px 0;
+        margin: 10px 20px;
+    }
+    
+    .Logo {
+        width: auto;
     }
     
     #nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 10px;
     }
     
-    .theme-toggle {
-        bottom: 10px;
-        right: 10px;
-        width: 40px;
-        height: 40px;
+    .nav-btn {
+        margin: 0 5px;
+    }
+    
+    /* Landing section */
+    #landing-intro {
+        width: 80vw;
+        margin-left: 5vw;
+    }
+    
+    #landing-header {
+        font-size: 2em;
+    }
+    
+    /* About and Skills sections */
+    .about-body, .skill-body {
+        width: 85vw;
+    }
+    
+    .skill {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .skill-col {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 200px;
+    }
+
+    .about-content-wrapper {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+    
+    #nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .nav-btn, .resume-btn {
+        width: 90%;
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    /* Landing section */
+    .home-body {
+        flex-direction: column;
+        height: auto;
+        padding-top: 120px;
+    }
+    
+    #social-links {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    .social-button {
+        margin: 0 10px;
+    }
+    
+    #landing-intro {
+        width: 90vw;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    #landing-header {
+        font-size: 1.8em;
+        line-height: 1.4;
+    }
+    
+    /* About and Skills sections */
+    .about-body, .skill-body {
+        width: 95vw;
+        padding: 20px;
     }
     
     .after-paragraph p {
+        font-size: 0.95em;
+    }
+    
+    .skill {
+        flex-direction: column;
+    }
+    
+    .skill-col {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    /* Projects section */
+    .container {
+        padding: 0 10px;
+    }
+    
+    .project-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .list-tag {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Contact section */
+    .contact-container {
+        height: auto;
+        min-height: 60vh;
+        padding: 60px 20px;
+        margin-bottom: 60px;
+    }
+    
+    .contact-info {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    
+    /* Footer */
+    footer {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .footer-sitemap, .footer-logo {
+        width: 100%;
+        align-items: center;
+        margin: 10px 0;
+    }
+    
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .about-content-wrapper {
+        width: 90%;
+    }
+    
+    .about-body {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small devices */
+    nav div {
+        margin: 5px 10px;
+    }
+    
+    #landing-header {
+        font-size: 1.5em;
+    }
+    
+    #landing-welcome {
         font-size: 1em;
-        line-height: 1.6;
-        margin-bottom: 1.5em;
     }
     
     .after-heading h2 {
         font-size: 1.2em;
-        margin-bottom: 1em;
     }
+    
+    .project-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .project-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact-info {
+        font-size: 1.1em;
+    }
+    
+    /* Adjust theme toggle button position */
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .about-content-wrapper {
+        width: 95%;
+    }
+
+    .contact-container {
+        padding: 40px 20px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Handle very small devices */
+@media (max-width: 320px) {
+    #landing-header {
+        font-size: 1.3em;
+    }
+    
+    .skill-col-heading {
+        font-size: 0.9em;
+    }
+    
+    .skills p {
+        font-size: 0.85em;
+    }
+}
+
+/* Handle height-based media queries */
+@media (max-height: 600px) {
+    .home-body {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 50px;
+    }
+    
+    .contact-container {
+        min-height: 100vh;
+    }
+}
+
+/* Ensure smooth transitions on resize */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Prevent transition on page load */
+.no-transition {
+    transition: none !important;
 }
 
 /* Theme transition animation */
@@ -866,5 +1578,338 @@ footer {
         opacity: 1;
     }
 }
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-color);
+}
+
+/* Social Media Links with Brand Colors */
+.social-button {
+    color: #a0a0a0 !important; /* Light gray default color */
+    transition: color 0.3s ease !important;
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+}
+
+/* Brand-specific colors on hover */
+.social-button.linkedin:hover {
+    color: #0077b5 !important; /* LinkedIn blue */
+}
+
+.social-button.github:hover {
+    color: #d8d8d8 !important; /* GitHub dark gray */
+}
+
+.social-button.behance:hover {
+    color: #1769ff !important; /* Behance blue */
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #nav-links.active {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--bg-color);
+        padding: 20px;
+        z-index: 999;
+    }
+
+    .nav-btn {
+        margin: 16px 0;
+    }
+
+    /* Adjust logo position for mobile */
+    .Logo {
+        margin-left: 20px;
+    }
+}
+
+/* Add smooth transition for background color change */
+nav {
+    transition: background-color 0.3s ease;
+}
+
+/* Optional: Add a class for scrolled state with different styling */
+nav.scrolled {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Update home section to account for navbar */
+.home-body {
+    margin-top: 20px;
+}
+
+/* Get in touch styles */
+#getTouch {
+    margin-top: 2em;
+    margin-bottom: 180px; 
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact {
+    margin-left: 5px;
+}
+
+#mail {
+    text-decoration: none;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+#mail:hover {
+    color: white;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E%3C/svg%3E");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: transform 0.3s ease;
+}
+
+#getTouch:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #getTouch {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #getTouch {
+        font-size: 1.1em;
+    }
+}
+
+/* About Section Styles */
+.about-body {
+    background-color: #1a2b4d;
+    width: 100%;
+    padding: 80px 0;
+    margin-top: 100px; /* Keep existing top margin */
+    position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #getTouch {
+        margin-bottom: 120px; /* Slightly reduced on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #getTouch {
+        margin-bottom: 100px; /* Further reduced on mobile */
+    }
+}
+
+/* Add this to your existing CSS */
+.skill-tag.locked {
+    background-color: #808080;
+    opacity: 0.7;
+    position: relative;
+    cursor: not-allowed;
+    padding-right: 35px; /* Space for lock icon */
+}
+
+.skill-tag.locked:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.skill-tag.locked i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+}
+
+/* Update the locked skill tooltip */
+.skill-tag.locked::after {
+    content: "In Progress..."; /* Alternative options: "Learning Path" or "Future Skill" */
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.skill-tag.locked:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Add these brand colors to your existing CSS */
+.skill-tag.oracle {
+    background-color: #F80000; /* Oracle's red */
+}
+
+.skill-tag.supabase {
+    background-color: #3ECF8E; /* Supabase's green */
+    color: #000000;
+}
+
+/* Add XAMPP brand color to your existing CSS */
+.skill-tag.xampp {
+    background-color: #FB7A24; /* XAMPP's orange color */
+}
+
+/* Add these brand colors to your existing CSS */
+.skill-tag.pandas {
+    background-color: #150458; /* Pandas dark blue */
+}
+
+.skill-tag.matplotlib {
+    background-color: #11557C; /* Matplotlib's blue */
+}
+
+/* Add Power BI brand color to your existing CSS */
+.skill-tag.powerbi {
+    background-color: #F2C811; /* Power BI's yellow/gold color */
+    color: #000000; /* Black text for better contrast on yellow */
+}
+
+/* Add PL/SQL brand color to your existing CSS */
+.skill-tag.plsql {
+    background-color: #C74634; /* Oracle's red variant for PL/SQL */
+}
+
+/* Skills Header Layout */
+.skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* Status Indicator Styles */
+.skill-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+/* Pulse Animation for the dot */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .skill-status {
+        font-size: 0.8em;
+    }
+}
+
+/* Container for all sections after landing */
+.after-body {
+    width: 100%;
+    position: relative;
+}
+
 
 
