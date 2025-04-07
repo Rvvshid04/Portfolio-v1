@@ -1285,7 +1285,7 @@ footer {
     transition-delay: 0.3s;
 }
 
-.container .project-card:nth-child(3) {
+.container .project-card:nth-width(3) {
     transition-delay: 0.5s;
 }
 
